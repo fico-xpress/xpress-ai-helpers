@@ -1,11 +1,11 @@
 # xpress-ai-helpers
 
 This repo provides guidance documents ("skills") that help LLMs or AI coding agents
-work better on tasks related to FICO Xpress Solver, such as writing Xpress Python API models, writing Mosel code, and searching Xpress documentation.
+work better on tasks related to FICO&reg; Xpress Solver, such as writing Xpress Python API models, writing Mosel code, and searching Xpress documentation.
 
 Each skill folder contains plain markdown files, a provider-agnostic format
 intended to work with any LLM-based tool. These skills were developed and
-tested with [Claude](https://www.anthropic.com/claude-code).
+tested with [Claude Code](https://www.anthropic.com/claude-code).
 
 ## Skills
 
@@ -57,28 +57,12 @@ Some skills also include additional reference files alongside `SKILL.md`
 when to pull one in -- copy/paste that file's content too at that point,
 the same way you would `SKILL.md` itself.
 
-### Optional: Claude Code plugin marketplace
-
-If you use Claude Code across many projects and want these skills to
-auto-update instead of copying folders manually, you can package this repo
-as a [Claude Code plugin marketplace](https://docs.claude.com/en/docs/claude-code/plugin-marketplaces)
-rather than following the manual copy steps above. This is optional and
-Claude-Code-specific -- it is not needed to use the skills, and every skill
-still works with the plain copy-paste approach for any other tool.
-
-To set this up: add a `.claude-plugin/marketplace.json` at the repo root
-listing each skill folder as a plugin `source`, plus a `.claude-plugin/plugin.json`
-inside each skill folder with its name/description/version. Users then run
-`/plugin marketplace add <this-repo>` once, and `/plugin install <skill-name>`
-per skill, and Claude Code keeps them in sync with this repo going forward.
-This repo does not currently ship a marketplace layout.
-
 ## Examples
 
 These show the kind of prompt each skill is meant to help with, and what a
 good response looks like. Exact invocation depends on your tool (slash
-command, named reference, or pasted instructions -- see "Using these
-skills" above); the examples below just describe the skill as "loaded"
+command, named reference, or pasted instructions -- see [Using these
+skills](#using-these-skills) above); the examples below just describe the skill as "loaded"
 without assuming a specific syntax.
 
 ### xpress-python-api
@@ -96,7 +80,7 @@ Expected: a complete model using `addVariable`, `addConstraint`,
 `addIndicator`, `setObjective`, and the correct `SolStatus` enum check
 after solving.
 
-**Debugging an infeasible model (pulls in `infeasibility-iis.md`):**
+**Diagnosing an infeasible model (pulls in `infeasibility-iis.md`):**
 
 ```text
 With the xpress-python-api skill loaded: my model keeps returning
@@ -106,8 +90,7 @@ How do I find which constraints are in conflict?
 ```
 
 Expected: an explanation of `firstIIS(0)` / `getIISData()`, how to decode
-constraint names from `getNameList(xp.Namespaces.ROW)`, and a flag on any
-deprecated API usage in the pasted code.
+constraint names from `getNameList(xp.Namespaces.ROW)`.
 
 ### xpress-mosel
 
