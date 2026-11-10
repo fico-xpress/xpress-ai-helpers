@@ -19,6 +19,8 @@ The docs live under the Xpress installation's `docs/` folder. Resolve the instal
 
 If neither the environment variable nor a default path works, ask the user for their Xpress install path rather than guessing.
 
+The same Markdown set can also be downloaded as a zip [here](https://www.fico.com/fico-xpress-optimization/docs/latest/xpress_docs_markdown.zip).
+
 ## Directory Layout
 
 ```

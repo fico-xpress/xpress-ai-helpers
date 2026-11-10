@@ -12,7 +12,7 @@ Quick reference and modeling patterns for the FICO Xpress Python API (`import xp
 
 ## Documentation Location
 
-- **Full Python API reference:** `python-interface.md` is the complete Xpress Python API reference -- every method, its full signature, arguments, and return values -- generated from the Xpress XML doc sources so it always matches the installed solver version. It ships alongside the Xpress install at `%XPRESSDIR%\docs\solver\MD\python-interface.md` (Windows) or `$XPRESSDIR/docs/solver/MD/python-interface.md` (Linux/Mac); also available on the Xpress docs website. The full set of Markdown docs (generated from the XML sources) is also downloadable as a zip from the Xpress docs website.
+- **Full Python API reference:** `python-interface.md` is the complete Xpress Python API reference -- every method, its full signature, arguments, and return values -- generated from the Xpress XML doc sources so it always matches the installed solver version. It ships alongside the Xpress install at `%XPRESSDIR%\docs\solver\MD\python-interface.md` (Windows) or `$XPRESSDIR/docs/solver/MD/python-interface.md` (Linux/Mac); also available on the Xpress docs website. The full set of Markdown docs (generated from the XML sources) is also downloadable as a [zip](https://www.fico.com/fico-xpress-optimization/docs/latest/xpress_docs_markdown.zip) from the Xpress docs website.
 - **Example notebooks:** [github.com/fico-xpress/python-notebooks](https://github.com/fico-xpress/python-notebooks) (public)
 - **Python examples (.py files):** `<xpressmp-install>/examples/python` (standard install path: `C:\xpressmp\examples\python`)
 
@@ -31,7 +31,7 @@ grep -A 20 "problem.repairWeightedInfeas" "path/to/python-interface.md"
 
 If `python-interface.md` cannot be found at any of the paths above, tell the
 user it's missing and ask them to point you to their `XPRESSDIR` install path
-or the Xpress docs website to download the Markdown docs zip. `help()` is a
+or the [Xpress docs website](https://www.fico.com/fico-xpress-optimization/docs/latest/xpress_docs_markdown.zip) to download the Markdown docs zip. `help()` is a
 reasonable fallback in that case since it ships with the installed package --
 do not fall back to guessing signatures from memory.
 
